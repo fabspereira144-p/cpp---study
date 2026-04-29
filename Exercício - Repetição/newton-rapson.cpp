@@ -17,7 +17,7 @@ int main()
     while (fabs(X_novo - Xi) >= 0.1) //enquanto o resultado for maior que 0.1 faça o loop
     {
         Xi = X_novo; //antigo x_next vira o xi
-        X_novo = Xi - ((Xi * Xi) - Y) / (2 * Xi); //calcula x_next a partir no xi
+        X_novo = Xi - ((Xi * Xi) - Y) / (2 * Xi); //calcula x_next a partir do novo xi
         acumulador++;
     }
 

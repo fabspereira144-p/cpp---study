@@ -3,7 +3,8 @@ using namespace std;
 
 int main()
 {
-    int A[5][5], B[5][5];
+    int A[5][5];
+    int soma = 0;
 
     cout << "Digite os valores da matria A: " << endl;
     for (int l=0; l<5; l++)
@@ -18,25 +19,14 @@ int main()
     {
         for (int c=0; c<5; c++)
         {
-            if (l == c)
+            if (l == c && A[l][c] % 2 != 0)
             {
-                B[l][c] = A[l][c] * 3;
-            }
-            else
-            {
-                B[l][c] = A[l][c] * 2;
+                soma += A[l][c];
             }
         }
     }
 
-    for (int l=0; l<5; l++)
-    {
-        for (int c=0; c<5; c++)
-        {
-            cout << B[l][c] << " ";
-        }
+    cout << "Soma dos elementos da diagonal principal (elementos impares): " << soma << endl;
 
-        cout << endl;
-    }
     return 0;
 }
